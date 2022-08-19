@@ -39,7 +39,11 @@ const quotes = [
 
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child"); 
-const randIdx = parseInt(Math.random() * 9);
 
-quote.innerText = quotes[randIdx].quote;
-author.innerText = quotes[randIdx].author;
+function showRandQuote() {
+    const randIdx = parseInt(Math.random() * 9);
+    quote.innerText = quotes[randIdx].quote;
+    author.innerText = quotes[randIdx].author;
+}
+
+showRandQuote();
